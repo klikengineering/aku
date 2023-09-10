@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>KLIK ENGINEERING- Home Page</title>
-<link href="images/akugbelogo.jpg" rel="icon">
+<link href="images/IMG-20230506-WA0011.jpg" rel="icon">
 </head>
 </head>
 <body>
