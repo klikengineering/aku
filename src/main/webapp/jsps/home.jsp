@@ -151,7 +151,7 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 <hr>
 <div style="text-align: center;">
         <span>
-                <img src="images/kliklogo.jpg" alt="" width="150">
+                <img src="images/IMG-20230506-WA0010.jpg" alt="" width="170"> 
         </span>
         <span style="font-weight: bold;">
                 KLIK ENGINEERING,
