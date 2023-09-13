@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>akugbe-App</finalName>
+		<finalName>akugbe-new</finalName>
 		
 		<plugins>
 			<plugin>
