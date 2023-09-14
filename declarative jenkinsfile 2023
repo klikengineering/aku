@@ -49,13 +49,6 @@ pipeline{
          }
       }
     }
-
-
-stage('8.APM'){
-        sh "echo 'monitoring and observation and alerting' "
-        sh "echo 'application performance Monitoring in progress' "
-      }
-    }
     
     post{
         always{
