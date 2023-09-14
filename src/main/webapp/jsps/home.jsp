@@ -12,9 +12,13 @@
 <h1 align="center">Welcome to Akugbe test run site, this is an introduction into what the APP AKUGBE is all about.</h1>
 <h1 align="center">We are developing quality Software Solutions to millions of clients globally.
                    We are saving millionaires for Nigerians by giving you the freedom to have fun with less bills and less peer pressure.
-                   WATCH THIS SPACE !!!
-                   we are currently testing our jenkins pipeline using both the scripted and declarative pipeline and automating builds with git scm web-hook
-                   Full deployment Starts on December 15, 2023. </h1>
+                   we are currently testing our jenkins pipeline using both the scripted and declarative pipeline and automating builds with git scm web-hook</h1>
+
+<h1 align="center"></h1>
+
+<h1 align="center">WATCH THIS SPACE !!!</h1>
+
+<h1 align="center">Full deployment Starts on December 15, 2023.</h1>
 <hr>
 <br>
 
