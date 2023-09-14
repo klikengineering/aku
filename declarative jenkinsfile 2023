@@ -32,7 +32,7 @@ pipeline{
       }
       stage('5.Deploy2UAT'){
         steps{
-            deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://18.212.109.103:8080/')], contextPath: null, war: 'target/*.war'
+            deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
         }
       }
       stage('6.ManualApproval'){
@@ -45,36 +45,32 @@ pipeline{
       }
       stage('7.Deploy2Prod'){
         steps{
-            deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://18.212.109.103:8080/')], contextPath: null, war: 'target/*.war'
+            deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
          }
       }
     }
     post{
         always{
-  emailext body: '''Hi Team,
+ emailext attachLog: true, body: '''hello Team,
+The build and deployment status is a success. kudos to you all and i appreciate all the efforts
 
-  The build and Deployment status for is a success.
-
-  Regards,
-  Landmark Technologies ''', recipientProviders: [buildUser(), contributor(), developers(), requestor()], subject: 'build and deployment status', to: 'mylandmarktech@gmail.com'
+BRGDS,
+KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(kevoghene@yahoo.com), contributor(), developers(flowwith2ok@gmail.com), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com'
 
         }
         success{
-  emailext body: '''Hi Team,
+ emailext attachLog: true, body: '''hello Team,
+The build and deployment status is a success. kudos to you all and i appreciate all the efforts
 
-  The build and Deployment is a success.
-
-  Regards,
-  Landmark Technologies ''', recipientProviders: [buildUser(), contributor(), developers(), requestor()], subject: 'build and deployment status', to: 'mylandmarktech@gmail.com'
-
+BRGDS,
+KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(kevoghene@yahoo.com), contributor(), developers(flowwith2ok@gmail.com), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com'
         }
         failure{
-  emailext body: '''Hi Team,
+ emailext attachLog: true, body: '''hello Team,
+The build and deployment status failed. kudos to you all and i appreciate all the efforts, lets find out the issues and fix them.
 
-  The build and Deployment failed.
-
-  Regards,
-  Landmark Technologies ''', recipientProviders: [buildUser(), contributor(), developers(), requestor()], subject: 'build and deployment status', to: 'mylandmarktech@gmail.com'
+BRGDS,
+KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(kevoghene@yahoo.com), contributor(), developers(flowwith2ok@gmail.com), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com'
 
         }
     }
