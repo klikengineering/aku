@@ -49,6 +49,14 @@ pipeline{
          }
       }
     }
+
+
+stage('8.APM'){
+     steps{
+        sh "echo 'monitoring and observation and alerting' "
+        sh "echo 'application performance Monitoring in progress' "
+    }
+    }
     post{
         always{
  emailext attachLog: true, body: '''hello Team,
