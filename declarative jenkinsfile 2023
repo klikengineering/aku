@@ -55,7 +55,7 @@ pipeline{
 The build and deployment status is a success. kudos to you all and i appreciate all the efforts
 
 BRGDS,
-KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com'
+KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com, klikengineering@gmail.com, flowwith2ok@gmail.com'
 
         }
         success{
@@ -63,14 +63,14 @@ KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), cont
 The build and deployment status is a success. kudos to you all and i appreciate all the efforts
 
 BRGDS,
-KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com'
+KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com, klikengineering@gmail.com, flowwith2ok@gmail.com'
         }
         failure{
  emailext attachLog: true, body: '''hello Team,
 The build and deployment status failed. kudos to you all and i appreciate all the efforts, lets find out the issues and fix them.
 
 BRGDS,
-KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com'
+KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com, klikengineering@gmail.com, flowwith2ok@gmail.com'
 
         }
     }
