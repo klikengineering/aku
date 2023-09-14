@@ -80,4 +80,5 @@ BRGDS,
 KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), contributor(), developers(), requestor()], replyTo: 'klikengineering@yahoo.com', subject: 'Build and Deployment Status', to: 'kevoghene@yahoo.com, klikengineering@gmail.com, flowwith2ok@gmail.com'
 
         }
-   }
+    }
+}
