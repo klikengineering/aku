@@ -81,4 +81,5 @@ KLIK ENGINEERING. ''', compressLog: true, recipientProviders: [buildUser(), cont
 
         }
     }
+  }
 }
