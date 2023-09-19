@@ -8,10 +8,11 @@ node
  }
  
  stage("Build"){
-     
+     //nodejs(nodeJSInstallationName: 'nodejs16.20.1') {
         sh 'npm install'
+        }
       
-   }
+    }
  
  
   /* stage('ExecuteSonarQubeReport') {
