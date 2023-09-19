@@ -10,7 +10,7 @@ pipeline{
       
       stage('1.CloneCode'){
         steps{
-            sh "echo 'cloning the latest application version' "
+            sh "echo 'cloning the latest application version.' "
             git "https://github.com/klikengineering/aku.git"
         }
       }
