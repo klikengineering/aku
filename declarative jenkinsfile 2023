@@ -27,12 +27,14 @@ pipeline{
       }
       stage('4.UploadArtifacts'){
         steps{
-          sh "mvn deploy"   
+          sh "echo 'testing the deploying actifacts stage without a running server' "
+          //sh "mvn deploy"   
         }
       }
       stage('5.Deploy2UAT'){
         steps{
-            deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
+          sh "echo 'testing the deploying to UAT stage without a running server' "
+            //deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
         }
       }
       stage('6.ManualApproval'){
@@ -45,7 +47,8 @@ pipeline{
       }
       stage('7.Deploy2Prod'){
         steps{
-            deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
+          sh "echo 'testing the deploying to Prod stage without a running server' "
+            //deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
         }
       }
       
