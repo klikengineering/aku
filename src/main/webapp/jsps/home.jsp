@@ -18,7 +18,7 @@
 
 <h1 align="center">WATCH THIS SPACE !!!</h1>
 
-<h1 align="center">Full deployment Starts on December 15, 2023.</h1>
+<h1 align="center">Full deployment Starts on December 15, 2023. Hope to see you!!!</h1>
 <hr>
 <br>
 
