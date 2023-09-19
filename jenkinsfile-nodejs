@@ -15,16 +15,18 @@ node
     }
  
  
-  /* stage('ExecuteSonarQubeReport') {
-     //nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
-        sh 'npm run sonar'
+   stage('ExecuteSonarQubeReport') {
+     nodejs(nodeJSInstallationName: 'nodejs17') {
+        //sh 'npm run sonar'
+        sh "echo QA of nodeJS project" 
     }
       
         } 
 		
     stage('UploadintoNexus') {
-       //nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
-          sh 'npm publish'
+       nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
+          //sh 'npm publish'
+          sh "echo backup of nodejs project" 
       }
       
           }	
@@ -33,7 +35,8 @@ node
  {
  //sh "./scripts/run.sh"
  //nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
-        sh 'npm start &'
+        //sh 'npm start &'
+        sh "echo START nodeJS project" 
     }
-}   */  
+}   
 }
