@@ -1,3 +1,4 @@
+@Library('akugbe-ss') _
 pipeline{
     agent any 
     tools{
@@ -6,28 +7,37 @@ pipeline{
     //options{}
     //triggers{}
     stages{
-      stage('1.CloneCode'){
+      stage('1.INTRO'){
+        steps{
+            sh "echo 'cloning the latest application version' "
+            akugbe("Intro")
+        }
+      }
+
+      stage('2.CloneCode'){
         steps{
             sh "echo 'cloning the latest application version' "
             git "https://github.com/klikengineering/aku.git"
         }
       }
-      stage('2.mvnBuild'){
+      stage('3.mvnBuild'){
         steps{
           sh "echo 'running JUnit-test-cases' "
           sh "echo 'testing must passed to create artifacts ' "
-          sh "mvn clean package"             
+          akugbe("Build")            
         }
       }
-      stage('3.CodeQuality'){
+      stage('4.CodeQuality'){
         steps{
           sh "echo 'Perfoming CodeQualityAnalysis' "
+          akugb("SonarQube Report")
           //sh "mvn sonar:sonar"              
         }
       }
-      stage('4.UploadArtifacts'){
+      stage('5.UploadArtifacts'){
         steps{
           sh "echo 'testing the deploying actifacts stage without a running server' "
+          akugbe("Upload Into Nexus")
           //sh "mvn deploy"   
         }
       }
