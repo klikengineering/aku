@@ -23,17 +23,17 @@ pipeline{
 
       stage('3.mvnBuild'){
         steps{
-          akugbe("Build")            
+            akugbe("Build")            
         }
       }
       stage('4.CodeQuality'){
         steps{
-          akugb("SonarQube Report")             
+            akugb("SonarQube Report")             
         }
       }
       stage('5.UploadArtifacts'){
         steps{
-          akugbe("Upload Into Nexus")  
+            akugbe("Upload Into Nexus")  
         }
       }
       stage('5.Deploy2UAT'){
