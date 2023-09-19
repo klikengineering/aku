@@ -26,9 +26,9 @@ pipeline{
             akugbe("Build")            
         }
       }
-       stage('2.INTR'){
+       stage('3.Execute SonarQube Report'){
         steps{
-            akugbe("Intro")
+            akugbe("SonarQube Report")
         }
       }
       stage('5.UploadArtifacts'){
