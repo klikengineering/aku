@@ -28,14 +28,12 @@ pipeline{
       }
       stage('4.CodeQuality'){
         steps{
-          akugb("SonarQube Report")
-          //sh "mvn sonar:sonar"              
+          akugb("SonarQube Report")             
         }
       }
       stage('5.UploadArtifacts'){
         steps{
-          akugbe("Upload Into Nexus")
-          //sh "mvn deploy"   
+          akugbe("Upload Into Nexus")  
         }
       }
       stage('5.Deploy2UAT'){
