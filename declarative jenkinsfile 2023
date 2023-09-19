@@ -40,7 +40,7 @@ pipeline{
       }
       stage('5.Deploy2UAT'){
         steps{
-          sh "echo 'TESTING THE WEBHOOK without a running server' "
+          sh "echo 'TESTING THE WEBHOOK without a running server, LOOKS GOOD' "
           sh "echo 'testing the deploying to UAT stage without a running server' "
             //deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
         }
