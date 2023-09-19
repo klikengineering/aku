@@ -7,10 +7,11 @@ node
    git "https://github.com/dizzy-101/nodejs-application"
  }
  
- stage("Build")
- {
+ stage("Build"){
+     nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm install'
-    }
+      }
+   }
  
  
   /* stage('ExecuteSonarQubeReport') {
