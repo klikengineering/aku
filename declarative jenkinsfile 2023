@@ -9,7 +9,7 @@ pipeline{
     stages{
       stage('1.INTRO'){
         steps{
-            sh "echo 'cloning the latest application version' "
+            sh "echo 'WELCOME TO THE DEPLOYMENT OF AKUGBE' "
             akugbe("Intro")
         }
       }
