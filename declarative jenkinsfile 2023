@@ -17,28 +17,23 @@ pipeline{
 
       stage('2.INTRO'){
         steps{
-            sh "echo 'WELCOME TO THE DEPLOYMENT OF AKUGBE' "
             akugbe("Intro")
         }
       }
 
       stage('3.mvnBuild'){
         steps{
-          sh "echo 'running JUnit-test-cases' "
-          sh "echo 'testing must passed to create artifacts ' "
           akugbe("Build")            
         }
       }
       stage('4.CodeQuality'){
         steps{
-          sh "echo 'Perfoming CodeQualityAnalysis' "
           akugb("SonarQube Report")
           //sh "mvn sonar:sonar"              
         }
       }
       stage('5.UploadArtifacts'){
         steps{
-          sh "echo 'testing the deploying actifacts stage without a running server' "
           akugbe("Upload Into Nexus")
           //sh "mvn deploy"   
         }
