@@ -26,7 +26,7 @@ pipeline{
             akugbe("Build")            
         }
       }
-       stage('2.INTRO'){
+       stage('2.INTR'){
         steps{
             akugbe("Intro")
         }
