@@ -18,13 +18,13 @@ pipeline{
       stage('2.INTRO'){
         steps{
             akugbe("Intro")
-            sh "echo 'running QA on akugbe'"
+            sh "echo 'Deploying akugbe'"
         }
       }
 
       stage('3.mvnBuild'){
         steps{
-             sh "echo 'building akugbe'"
+            sh "echo 'building akugbe'"
             akugbe("Build")            
         }
       }
