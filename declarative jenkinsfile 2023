@@ -7,19 +7,21 @@ pipeline{
     //options{}
     //triggers{}
     stages{
-      stage('1.INTRO'){
+      
+      stage('1.CloneCode'){
+        steps{
+            sh "echo 'cloning the latest application version' "
+            git "https://github.com/klikengineering/aku.git"
+        }
+      }
+
+      stage('2.INTRO'){
         steps{
             sh "echo 'WELCOME TO THE DEPLOYMENT OF AKUGBE' "
             akugbe("Intro")
         }
       }
 
-      stage('2.CloneCode'){
-        steps{
-            sh "echo 'cloning the latest application version' "
-            git "https://github.com/klikengineering/aku.git"
-        }
-      }
       stage('3.mvnBuild'){
         steps{
           sh "echo 'running JUnit-test-cases' "
