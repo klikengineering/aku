@@ -26,9 +26,9 @@ pipeline{
             akugbe("Build")            
         }
       }
-      stage('4.CodeQuality'){
+       stage('2.INTRO'){
         steps{
-            akugb("SonarQube Report")             
+            akugbe("Intro")
         }
       }
       stage('5.UploadArtifacts'){
