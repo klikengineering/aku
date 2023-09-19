@@ -8,7 +8,7 @@ node
  }
  
  stage("Build"){
-   nodejs(nodeJSInstallationName: 'nodejs19') {
+   nodejs(nodeJSInstallationName: 'nodejs17') {
         sh 'npm install'
         }
       
