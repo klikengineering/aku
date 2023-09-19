@@ -1,3 +1,4 @@
+@Library('akugbe-ss') _
 pipeline{
     agent any 
     tools{
@@ -6,41 +7,50 @@ pipeline{
     //options{}
     //triggers{}
     stages{
+      
       stage('1.CloneCode'){
         steps{
-            sh "echo 'cloning the latest application version' "
+            sh "echo 'cloning the latest application version.' "
             git "https://github.com/klikengineering/aku.git"
         }
       }
-      stage('2.mvnBuild'){
+
+      stage('2.INTRO'){
         steps{
-          sh "echo 'running JUnit-test-cases' "
-          sh "echo 'testing must passed to create artifacts ' "
-          sh "mvn clean package"             
+            akugbe("Intro")
+            sh "echo 'Deploying akugbe'"
         }
       }
-      stage('3.CodeQuality'){
+
+      stage('3.mvnBuild'){
         steps{
-          sh "echo 'Perfoming CodeQualityAnalysis' "
-          //sh "mvn sonar:sonar"              
+            sh "echo 'building akugbe'"
+            akugbe("Build")            
         }
       }
-      stage('4.UploadArtifacts'){
+       stage('3.Execute SonarQube Report'){
         steps{
-          sh "echo 'testing the deploying actifacts stage without a running server' "
-          //sh "mvn deploy"   
+            akugbe("SonarQube Report")
+            sh "echo 'running QA on akugbe'"
+        }
+      }
+      stage('5.UploadArtifacts'){
+        steps{
+            sh "echo 'backup on akugbe'"
+            akugbe("Upload Into Nexus")  
+            
         }
       }
       stage('5.Deploy2UAT'){
         steps{
-          sh "echo 'TESTING THE WEBHOOK without a running server' "
+          sh "echo 'TESTING THE WEBHOOK without a running server, LOOKS GOOD' "
           sh "echo 'testing the deploying to UAT stage without a running server' "
             //deploy adapters: [tomcat9(credentialsId: 'kevtom', path: '', url: 'http://54.197.6.138:8080/')], contextPath: null, war: 'target/*.war'
         }
       }
       stage('6.ManualApproval'){
         steps{
-          sh "echo 'Please review the application performance' "
+          sh "echo 'Please review the application performance.' "
           timeout(time:600, unit:'MINUTES') {
           input message: 'Application ready for deployment, Please review and approve'
       }  
