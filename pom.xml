@@ -6,7 +6,8 @@
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
 	
-	<version>0.0.2-SNAPSHOT</version> 
+	<version>1.2.3</version> 
+
 	
 	<name>maven-web-application</name>
 
@@ -22,9 +23,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http:54.175.245.26:9000/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>admin</sonar.password> 
+		<sonar.host.url>http://18.204.16.48:9000/</sonar.host.url>
+		<sonar.login>kelvin</sonar.login>
+		<sonar.password>jumped</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -94,20 +95,20 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://3.92.61.57:8181/mylandmarktech/repository/tesla-releases/</url>
+	      <name>KLIK ENGINEERING AKUGBE RELEASE REPO </name>
+	      <url>http://52.91.147.33:8081/klik/repository/Akugbe-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.92.61.57:8181/mylandmarktech/repository/tesla-snapshots/</url>
+	      <name>KLIK ENGINEERING AKUGBE SNAPSHOT REPO </name>
+	      <url>http://52.91.147.33:8081/klik/repository/Akugbe-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
 	<build>
-		<finalName>tesla</finalName>
+		<finalName>akugbe-new</finalName>
 		
 		<plugins>
 			<plugin>
