@@ -4,7 +4,7 @@ node
   stage("CheckOutCodeGit")
   {
    sh "echo running ebay nodeJS project" 
-   git "https://github.com/klikengineering/aku.git"
+   git "https://github.com/dizzy-101/nodejs-application"
  }
  
  stage("Build")
