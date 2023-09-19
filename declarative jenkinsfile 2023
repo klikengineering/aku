@@ -18,22 +18,27 @@ pipeline{
       stage('2.INTRO'){
         steps{
             akugbe("Intro")
+            sh "echo 'running QA on akugbe'"
         }
       }
 
       stage('3.mvnBuild'){
         steps{
+             sh "echo 'building akugbe'"
             akugbe("Build")            
         }
       }
        stage('3.Execute SonarQube Report'){
         steps{
             akugbe("SonarQube Report")
+            sh "echo 'running QA on akugbe'"
         }
       }
       stage('5.UploadArtifacts'){
         steps{
+            sh "echo 'backup on akugbe'"
             akugbe("Upload Into Nexus")  
+            
         }
       }
       stage('5.Deploy2UAT'){
