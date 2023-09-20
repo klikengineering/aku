@@ -39,15 +39,15 @@ pipeline{
             sh "echo 'running QA on akugbe'"
         }
       }
-      stage('5.UploadArtifacts'){
-        steps{
-           agent {
+
+     agent {
   label {
     label 'master'
     retries 2
   }
 } 
-             
+      stage('5.UploadArtifacts'){
+        steps{
             sh "echo 'backup on akugbe'"
             akugbe("Upload Into Nexus")  
             
