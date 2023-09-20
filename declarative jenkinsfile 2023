@@ -41,6 +41,13 @@ pipeline{
       }
       stage('5.UploadArtifacts'){
         steps{
+           agent {
+  label {
+    label 'master'
+    retries 2
+  }
+} 
+             
             sh "echo 'backup on akugbe'"
             akugbe("Upload Into Nexus")  
             
