@@ -2,13 +2,10 @@
 pipeline{
     agent {
   label {
-    label 'master'
-    retries 2
-  }
- label {
     label 'sonar'
     retries 2
   }
+ 
 } 
     tools{
         maven 'maven3.9.4'
