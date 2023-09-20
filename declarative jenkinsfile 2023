@@ -23,7 +23,7 @@ pipeline{
       stage('2.INTRO'){
         steps{
             akugbe("Intro")
-            sh "echo 'Deploying akugbe now'"
+            sh "echo 'Deploying akugbe now ok'"
         }
       }
 
