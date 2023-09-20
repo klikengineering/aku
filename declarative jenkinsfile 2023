@@ -1,6 +1,11 @@
 @Library('akugbe-ss') _
 pipeline{
-    agent any 
+    agent {
+  label {
+    label 'maven'
+    retries 2
+  }
+} 
     tools{
         maven 'maven3.9.4'
     }
