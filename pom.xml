@@ -23,7 +23,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://18.204.16.48:9000/</sonar.host.url>
+		<sonar.host.url>http://54.160.115.108:9000/</sonar.host.url>
 		<sonar.login>kelvin</sonar.login>
 		<sonar.password>jumped</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>KLIK ENGINEERING AKUGBE RELEASE REPO </name>
-	      <url>http://52.91.147.33:8081/klik/repository/Akugbe-releases/</url>
+	      <url>http://54.209.219.41:8081/klik/repository/Akugbe-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KLIK ENGINEERING AKUGBE SNAPSHOT REPO </name>
-	      <url>http://52.91.147.33:8081/klik/repository/Akugbe-snapshot/</url>
+	      <url>http://54.209.219.41:8081/klik/repository/Akugbe-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
