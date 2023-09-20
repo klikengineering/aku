@@ -40,12 +40,6 @@ pipeline{
         }
       }
 
-     agent {
-  label {
-    label 'master'
-    retries 2
-  }
-} 
       stage('5.UploadArtifacts'){
         steps{
             sh "echo 'backup on akugbe'"
