@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>KLIK ENGINEERING AKUGBE RELEASE REPO </name>
-	      <url>http://54.197.105.125 :8081/klik/repository/Akugbe-releases/</url>
+	      <url>http://54.197.105.125:8081/klik/repository/Akugbe-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KLIK ENGINEERING AKUGBE SNAPSHOT REPO </name>
-	      <url>http://54.197.105.125 :8081/klik/repository/Akugbe-snapshot/</url>
+	      <url>http://54.197.105.125:8081/klik/repository/Akugbe-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
