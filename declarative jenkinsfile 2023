@@ -2,7 +2,7 @@
 pipeline{
     agent {
   label {
-    label 'master'
+    label 'sonar'
     retries 2
   }
  
